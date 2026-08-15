@@ -1,0 +1,1 @@
+UPDATE public.comm_form_routes SET send_auto_response = false, auto_response_template = NULL WHERE form_key = 'partner_lead';

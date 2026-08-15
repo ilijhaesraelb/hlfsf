@@ -1,0 +1,1 @@
+UPDATE public.comm_form_routes SET reference_prefix = 'PRESS' WHERE form_key = 'press_inquiry';
