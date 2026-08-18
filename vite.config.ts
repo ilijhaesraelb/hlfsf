@@ -12,4 +12,8 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Deploying to Vercel, not Cloudflare — override the package's cloudflare-module
+  // default so nitro emits a .vercel/output build Vercel can actually run.
+  // (Ignored inside Lovable's own sandbox, which always forces cloudflare-module.)
+  nitro: { preset: "vercel" },
 });
