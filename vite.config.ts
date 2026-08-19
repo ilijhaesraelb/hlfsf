@@ -53,7 +53,14 @@ export default defineConfig(({ mode, command }) => {
       }),
       viteReact(),
       // nitro builds the deployable server bundle; only needed for `vite build`.
-      ...(command === "build" ? [nitro({ preset: "vercel" })] : []),
+      // inlineDynamicImports avoids a Rolldown chunk-splitting bug where
+      // start-server-core and start-client-core end up in mutually
+      // importing chunks, leaving createCsrfMiddleware unassigned when
+      // its chunk is evaluated before the other (TypeError: createCsrfMiddleware
+      // is not a function).
+      ...(command === "build"
+        ? [nitro({ preset: "vercel", inlineDynamicImports: true })]
+        : []),
     ],
   };
 });
