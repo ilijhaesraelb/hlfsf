@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/hls-logo.png.asset.json";
 import { GoldLink } from "./primitives";
 import { BRAND } from "@/data/site";
 
@@ -54,7 +53,7 @@ export function CinematicHero() {
 
       <div className="relative z-10 w-full max-w-4xl py-32 text-center">
         <img
-          src={logo.url}
+          src="/hls-logo.png"
           alt="High Light Source Film Studios emblem"
           fetchPriority="high"
           className={`mx-auto h-28 w-28 rounded-full object-cover ring-1 ring-gold/40 transition-all duration-[2000ms] sm:h-36 sm:w-36 ${

@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/hls-logo.png.asset.json";
 import { LanguageSwitcher } from "@/components/site/LanguageSwitcher";
 import { useSiteSettings } from "@/lib/site-settings";
 
@@ -47,12 +46,12 @@ export function Header() {
       <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 lg:px-8">
         <Link to="/" search={{}} className="flex min-w-0 items-center gap-3">
           <img
-            src={setting("logo_primary") || logo.url}
+            src={setting("logo_primary") || "/hls-logo.png"}
             alt={`${brandName} emblem`}
             className="h-10 w-10 shrink-0 rounded-full object-cover ring-1 ring-gold/40"
           />
           <span className="min-w-0 leading-tight">
-            <span className="display block whitespace-nowrap text-[0.72rem] text-foreground sm:text-sm">
+            <span className="display block whitespace-nowrap text-[0.72rem] text-foreground sm:text-xs">
               {brandLead}
             </span>
             {brandTail ? (

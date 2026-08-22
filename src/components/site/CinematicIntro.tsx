@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouterState } from "@tanstack/react-router";
-import logo from "@/assets/hls-logo.png.asset.json";
 
 const SKIP_KEY = "hls:intro:skip";
 const SEEN_KEY = "hls:intro:seen";
@@ -138,7 +137,7 @@ export function CinematicIntro() {
 
       <div className="relative flex h-full flex-col items-center justify-center px-6 text-center">
         <img
-          src={logo.url}
+          src="/hls-logo.png"
           alt=""
           className="h-24 w-24 rounded-full object-cover ring-1 ring-gold/40"
           style={{ animation: anim("intro-mark 1600ms 700ms ease-out both") }}

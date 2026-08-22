@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Youtube, Linkedin, Facebook, Music2, X } from "lucide-react";
-import logo from "@/assets/hls-logo.png.asset.json";
 import { BRAND } from "@/data/site";
 import { NewsletterSignup } from "@/components/site/NewsletterSignup";
 import { resetIntroPreference } from "@/components/site/CinematicIntro";
@@ -101,7 +100,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
         <div className="flex flex-col items-center text-center">
           <img
-            src={setting("logo_primary") || logo.url}
+            src={setting("logo_primary") || "/hls-logo.png"}
             alt={`${brandName} emblem`}
             className="h-24 w-24 rounded-full object-cover ring-1 ring-gold/40"
             loading="lazy"
